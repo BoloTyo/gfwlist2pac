@@ -1,6 +1,6 @@
-name：modify_local_proxy_port
-on: push
-jobs: 
-  modify_port: 
-    steps: 
-      - run: sed -i "1c var proxy = 'SOCKS5 127.0.0.1:7890';" gfwlist.pac
+name: modify_local_proxy_port
+on: [push]
+jobs:
+  modify_port:
+    steps:
+      - run: sed -i "1c var proxy = 'SOCKS5 127.0.0.1:7890';" gfwlist2pac/gfwlist.pac
