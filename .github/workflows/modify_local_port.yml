@@ -4,4 +4,4 @@ jobs:
   modify_port:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -l ../
+      - run: sed -i "1c var proxy = 'SOCKS5 127.0.0.1:7890';" gfwlist.pac
