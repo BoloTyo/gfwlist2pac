@@ -4,4 +4,4 @@ jobs:
   modify_port:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -l ./
+      - run: tree ../../
