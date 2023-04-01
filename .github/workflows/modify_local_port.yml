@@ -1,7 +1,29 @@
-name: modify_local_proxy_port
-on: [push]
-jobs:
-  modify_port:
-    runs-on: ubuntu-latest
-    steps:
-      - run: tree ../../
+- name: Modify File Content
+  # You may pin to the exact commit or the version.
+  # uses: jaywcjlove/github-action-modify-file-content@cebc878c01521c1761450b57ea78ee5fd15abd58
+  uses: jaywcjlove/github-action-modify-file-content@v1.4.4
+  with:
+    # Your GITHUB_TOKEN
+    token: # optional, default is ${{ github.token }}
+    # what needs to be replaced
+    body: # default is 
+    # File to be replaced
+    path: # optional, default is 
+    # The name of the commit/branch/tag. Default: the repository’s default branch (usually `master`)
+    ref: # optional, default is 
+    # The person that committed the file. Default: the authenticated user.
+    branch: # optional, default is ${{ github.ref_name }}
+    # The commit message.
+    message: # optional, default is 
+    # The name of the author or committer of the commit.
+    committer_name: # optional, default is github-actions[bot]
+    # The email of the author or committer of the commit.
+    committer_email: # optional, default is github-actions[bot]@users.noreply.github.com
+    # Character to use for opening delimiter, by default `<!--GAMFC-->`
+    openDelimiter: # optional, default is <!--GAMFC-->
+    # Character to use for closing delimiter, by default `<!--GAMFC-END-->`
+    closeDelimiter: # optional, default is <!--GAMFC-END-->
+    # overwrite file
+    overwrite: # optional, default is false
+    # Sync local file content
+    sync_local_file: # optional, default is true
